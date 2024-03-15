@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            border: 3px; color: purple;
+        }
+        img.slika {
+            width: 10%;
+            border-radius: 50%;
+
+        }
+        input [type=text], input[type=pasword] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid; color:brown;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+
+        }
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: red;
+        }
+        .imgcontanier {
+            text-align: center;
+            margin: 24px 0 12px 0;
+
+        }
+        span.pass {
+            float: right;
+            padding-top: 16px;
+        }
+        .container{
+            padding: 16px;
+        }
+        /*Ekstra mali ekrani fix
+        Promjena span i odustani button*/
+        @media screen and (max-width: 300px) {
+          span.pass {
+            display: block;
+            float: none;
+          }
+          .cancelbtn {
+            width: 100%;
+          }
+          }  
+        
+    </style>
+</head>
+<body>
+    <form action="/action_page.php" method="post">
+    <h2>Login forma</h2>
+    <div class="imgcontanier">
+    <img src="./slika/images.png" alt="slika" class="slika">
+    </div>
+    <div class="container">
+        <label for="username"><b>Korisničko ime</b></label>
+        <input type="text" placeholder="Unesite korisničko ime" name="username" required>
+        <label for="pass"><b>Lozinka</b></label>
+        <input type="password" placeholder="Unesite lozinku" name="pass" required>
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remeber">
+            Zapamti me
+        </label>
+    </div>
+<div class="container" style="background-color: grey;">
+    <button class="cancelbtn" type="button">Oustani</button>
+    <span class="pass">Zaboravljena <a href="#">Lozinka?</a>
+    </span>
+</div>
+</form>
+</body>
+</html>
